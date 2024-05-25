@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EmpleadosrReport" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ff1f744e-7f5a-410d-bdb0-5cca4f4a62c3">
+    <property name="ireport.zoom" value="1.6105100000000008"/>
+    <property name="ireport.x" value="0"/>
+    <property name="ireport.y" value="0"/>
+    <style name="table">
+        <box>
+            <pen lineWidth="1.0" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <subDataset name="Table Dataset 1" uuid="e408edae-1a32-4be9-b278-ebe58ebfc193"/>
+    <queryString language="SQL">
+		<![CDATA[SELECT
+     *
+FROM
+     "EMPLEADO" EMPLEADO]]>
+    </queryString>
+    <field name="COD_EM" class="java.math.BigDecimal"/>
+    <field name="NOMBRE" class="java.lang.String"/>
+    <field name="APELLIDO" class="java.lang.String"/>
+    <field name="CORREO" class="java.lang.String"/>
+    <field name="DNI" class="java.lang.String"/>
+    <field name="PUESTO_EMPLE" class="java.lang.String"/>
+    <field name="ESTADO_CIVIL" class="java.lang.String"/>
+    <field name="GENERO" class="java.lang.String"/>
+    <field name="USUARIO" class="java.lang.String"/>
+    <field name="CONTRASEÑA" class="java.lang.String"/>
+    <field name="FECHA" class="java.lang.String"/>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="91" splitType="Stretch">
+            <rectangle>
+                <reportElement x="0" y="0" width="555" height="44" backcolor="#700818" uuid="553169e5-bc43-474f-bbfc-ddf11b650174"/>
+            </rectangle>
+            <staticText>
+                <reportElement x="0" y="0" width="555" height="44" forecolor="#FFFFFF" uuid="1d6a6a13-0399-456f-b7b3-160696f4fdc6"/>
+                <textElement>
+                    <font fontName="Times New Roman" size="36"/>
+                </textElement>
+                <text><![CDATA[Reporte de Empleados]]></text>
+            </staticText>
+            <rectangle>
+                <reportElement x="0" y="44" width="555" height="18" uuid="599ef019-0214-41ce-a76b-6d2342be653c"/>
+            </rectangle>
+            <textField pattern="dd/MM/yyyy">
+                <reportElement x="455" y="44" width="100" height="18" uuid="537bf64d-9622-4d9e-8fe1-b390cb86eb01"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="12" y="44" width="137" height="18" uuid="412fc759-8047-4a76-851f-68b8856ce2d2"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <text><![CDATA[Empresa Rojo Danes]]></text>
+            </staticText>
+            <rectangle>
+                <reportElement x="0" y="62" width="555" height="20" uuid="18cbbd07-f42d-4b64-b398-4b054b7dec82"/>
+            </rectangle>
+            <staticText>
+                <reportElement x="12" y="62" width="100" height="20" uuid="3b184634-a0f2-4283-8a84-8f74a00a589e"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <text><![CDATA[RUC: 12345678912]]></text>
+            </staticText>
+        </band>
+    </title>
+    <pageHeader>
+        <band splitType="Stretch"/>
+    </pageHeader>
+    <columnHeader>
+        <band height="20" splitType="Stretch">
+            <rectangle>
+                <reportElement x="0" y="0" width="555" height="20" forecolor="#000000" backcolor="#7C080C" uuid="bf0c90e0-c201-48e6-9445-80fce7be0448"/>
+            </rectangle>
+            <staticText>
+                <reportElement x="0" y="0" width="12" height="20" forecolor="#FFFFFF" uuid="824bf39a-a0ea-4e7f-a544-fa42bc34c751"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <text><![CDATA[N°]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="12" y="0" width="100" height="20" forecolor="#FFFFFF" uuid="14f9ad1b-c368-4ca2-80b2-fe47fd145086"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <text><![CDATA[Nombres]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="112" y="0" width="100" height="20" forecolor="#FFFFFF" uuid="64743699-7260-4478-9c97-2b8317f2768b"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <text><![CDATA[Apellidos]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="212" y="0" width="81" height="20" forecolor="#FFFFFF" uuid="68b98d67-0263-471f-a71c-78595517292f"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <text><![CDATA[DNI]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="293" y="0" width="34" height="20" forecolor="#FFFFFF" uuid="c9b45b68-9fc7-45d3-9b1e-8f9c2270e248"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <text><![CDATA[E.Civil]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="327" y="0" width="74" height="20" forecolor="#FFFFFF" uuid="75f485cd-7f29-4cdd-81c0-f43046952ff3"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <text><![CDATA[Puesto]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="401" y="0" width="66" height="20" forecolor="#FFFFFF" uuid="3f91b84a-861c-4e2c-ad52-3ca59703d1c5"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <text><![CDATA[Usuario]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="467" y="0" width="88" height="20" forecolor="#FFFFFF" uuid="bea0aca8-e3e3-425e-8a3c-b98674a99a12"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <text><![CDATA[Fecha de Ingreso]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="20" splitType="Stretch">
+            <rectangle>
+                <reportElement x="0" y="0" width="555" height="20" uuid="f2f0f7cf-6c83-495e-9dc1-91d7761aa673"/>
+            </rectangle>
+            <textField>
+                <reportElement x="0" y="0" width="12" height="20" uuid="17e55337-a615-4aca-b313-8a0566031b14"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{COD_EM}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="27" y="0" width="85" height="20" uuid="82f96624-fd55-4ccc-956e-7d6cf3d7aec6"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="129" y="0" width="83" height="20" uuid="e32f9e1b-7d8f-493c-a1c1-7ad81a84fc18"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{APELLIDO}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="212" y="0" width="81" height="20" uuid="41c6ab11-abb9-4d4c-935f-9cde0445f40d"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{DNI}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="293" y="0" width="34" height="20" uuid="14936345-b4f7-4359-9595-8d9d5157aa69"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{ESTADO_CIVIL}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="327" y="0" width="74" height="20" uuid="51f70a8d-453b-4864-ad38-74b0a1170163"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{PUESTO_EMPLE}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="401" y="0" width="66" height="20" uuid="f56da8a6-d697-4888-acc9-dd06b0a84157"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{USUARIO}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="467" y="0" width="88" height="20" uuid="aeb3ca63-6114-4d15-bc77-e74814aa8e6f"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{FECHA}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <columnFooter>
+        <band splitType="Stretch"/>
+    </columnFooter>
+    <pageFooter>
+        <band height="22" splitType="Stretch">
+            <rectangle radius="10">
+                <reportElement x="0" y="0" width="555" height="22" backcolor="#000000" uuid="e73eba70-327f-4665-94d4-6982814e31c6"/>
+            </rectangle>
+            <textField pattern="dd/MM/yyyy">
+                <reportElement x="77" y="0" width="52" height="20" forecolor="#FFFFFF" uuid="0211c6f2-957b-4034-a767-789158da15f4"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="12" y="0" width="64" height="20" forecolor="#FFFFFF" uuid="bbbe030f-1d99-440a-9bba-d9f11efb4308"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <text><![CDATA[Imprimido el :]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="451" y="0" width="80" height="20" forecolor="#FFFFFF" uuid="67ed140b-313c-4b65-b417-0a30d88a87a8"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+            </textField>
+            <textField evaluationTime="Report">
+                <reportElement x="512" y="0" width="29" height="20" forecolor="#FFFFFF" uuid="03bcd009-7428-4d51-89fc-1680d356e3ca"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageFooter>
+    <summary>
+        <band splitType="Stretch"/>
+    </summary>
+</jasperReport>
